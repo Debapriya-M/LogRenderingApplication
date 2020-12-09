@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Log Files</title>
+<link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+<link rel="stylesheet" th:href="@{/css/main.css}"/>
+<style>
+	div {margin: auto;}
+</style>
+</head>
+<body>
+	<main role="main" class="container">
+		<div class="starter-template">
+			<!-- <h1>
+				<span th:text="'Welcome'"></span>
+			</h1> -->
+			<h2 style="padding-left:25px;">Logs:</h2>
+		</div>
+
+		<ul>
+			<!-- <p th:text="${message}"></p> -->
+			<li th:each="str : ${message}" th:text="${str}"></li>
+			
+		</ul>
+	</main>
+	<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
